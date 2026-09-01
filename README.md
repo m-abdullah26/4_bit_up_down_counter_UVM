@@ -103,20 +103,9 @@ Monitor
 │   ├── counter_agent.sv
 │   ├── counter_env.sv
 │   ├── counter_test.sv
-│   ├── counter_up_test.sv
-│   ├── counter_down_test.sv
-│   ├── counter_reset_test.sv
-│   ├── counter_up_wrap_test.sv
-│   ├── counter_down_wrap_test.sv
-│   ├── counter_reset_during_count_test.sv
-│   ├── counter_up_down_test.sv
-│   ├── counter_corner_test.sv
-│   └── counter_all_test.sv
 │
 ├── tb/
 │   └── tb_top.sv
-│
-└── run.do
 ```
 
 ## 🧪 Verification Tests
