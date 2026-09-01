@@ -344,5 +344,4 @@
 # [UVM]     3
 # [RNTST]     1
 # [TEST_DONE]     1
-# ** Note: $finish    : C:/questasim64_2024.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 3055 ns  Iteration: 63  Instance: /tb_top
