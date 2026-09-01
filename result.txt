@@ -1,0 +1,348 @@
+# ----------------------------------------------------------------
+# 
+# UVM_INFO verilog_src/uvm_pkg-1.2/src/uvm_pkg.sv(277) @ 0: reporter [UVM] UVM-1.2.3
+# UVM_INFO verilog_src/uvm_pkg-1.2/src/uvm_pkg.sv(278) @ 0: reporter [UVM]  uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test counter_all_test...
+# UVM_INFO verilog_src/uvm_pkg-1.2/src/uvm_pkg.sv(339) @ 0: reporter [UVM] End Of Elaboration
+# UVM_INFO ./uvm/counter_test.sv(373) @ 0: uvm_test_top [ALL_TEST] Starting Random Sequence
+# [COUNTER_SCB PASS] rst=1, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=1
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=1
+# [COUNTER_SCB PASS] rst=1, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=15
+# [COUNTER_SCB PASS] rst=0, en=0, cout=14
+# [COUNTER_SCB PASS] rst=0, en=0, cout=13
+# [COUNTER_SCB PASS] rst=0, en=0, cout=12
+# [COUNTER_SCB PASS] rst=1, en=0, cout=11
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=15
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=15
+# [COUNTER_SCB PASS] rst=1, en=1, cout=14
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=1
+# [COUNTER_SCB PASS] rst=0, en=1, cout=2
+# [COUNTER_SCB PASS] rst=1, en=1, cout=3
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=15
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=15
+# [COUNTER_SCB PASS] rst=1, en=0, cout=14
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=15
+# [COUNTER_SCB PASS] rst=1, en=1, cout=14
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=15
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=15
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=15
+# [COUNTER_SCB PASS] rst=1, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=1
+# [COUNTER_SCB PASS] rst=1, en=0, cout=2
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=1
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=1
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=1
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=15
+# [COUNTER_SCB PASS] rst=1, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=1
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=1
+# [COUNTER_SCB PASS] rst=1, en=1, cout=2
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=15
+# [COUNTER_SCB PASS] rst=0, en=1, cout=14
+# [COUNTER_SCB PASS] rst=0, en=0, cout=15
+# [COUNTER_SCB PASS] rst=0, en=1, cout=14
+# [COUNTER_SCB PASS] rst=1, en=0, cout=15
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=15
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=1
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=1
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=1
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=15
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=1
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=15
+# UVM_INFO ./uvm/counter_test.sv(387) @ 995000: uvm_test_top [ALL_TEST] Starting Up Count Sequence
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=15
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=1
+# [COUNTER_SCB PASS] rst=0, en=1, cout=2
+# [COUNTER_SCB PASS] rst=0, en=1, cout=3
+# [COUNTER_SCB PASS] rst=0, en=1, cout=4
+# [COUNTER_SCB PASS] rst=0, en=1, cout=5
+# [COUNTER_SCB PASS] rst=0, en=1, cout=6
+# [COUNTER_SCB PASS] rst=0, en=1, cout=7
+# [COUNTER_SCB PASS] rst=0, en=1, cout=8
+# [COUNTER_SCB PASS] rst=0, en=1, cout=9
+# [COUNTER_SCB PASS] rst=0, en=1, cout=10
+# [COUNTER_SCB PASS] rst=0, en=1, cout=11
+# [COUNTER_SCB PASS] rst=0, en=1, cout=12
+# [COUNTER_SCB PASS] rst=0, en=1, cout=13
+# [COUNTER_SCB PASS] rst=0, en=1, cout=14
+# [COUNTER_SCB PASS] rst=0, en=1, cout=15
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=1
+# [COUNTER_SCB PASS] rst=0, en=1, cout=2
+# [COUNTER_SCB PASS] rst=0, en=1, cout=3
+# [COUNTER_SCB PASS] rst=0, en=1, cout=4
+# [COUNTER_SCB PASS] rst=0, en=1, cout=5
+# [COUNTER_SCB PASS] rst=0, en=1, cout=6
+# [COUNTER_SCB PASS] rst=0, en=1, cout=7
+# [COUNTER_SCB PASS] rst=0, en=1, cout=8
+# [COUNTER_SCB PASS] rst=0, en=1, cout=9
+# [COUNTER_SCB PASS] rst=0, en=1, cout=10
+# [COUNTER_SCB PASS] rst=0, en=1, cout=11
+# [COUNTER_SCB PASS] rst=0, en=1, cout=12
+# UVM_INFO ./uvm/counter_test.sv(401) @ 1305000: uvm_test_top [ALL_TEST] Starting Down Count Sequence
+# [COUNTER_SCB PASS] rst=0, en=1, cout=13
+# [COUNTER_SCB PASS] rst=1, en=0, cout=14
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=15
+# [COUNTER_SCB PASS] rst=0, en=0, cout=14
+# [COUNTER_SCB PASS] rst=0, en=0, cout=13
+# [COUNTER_SCB PASS] rst=0, en=0, cout=12
+# [COUNTER_SCB PASS] rst=0, en=0, cout=11
+# [COUNTER_SCB PASS] rst=0, en=0, cout=10
+# [COUNTER_SCB PASS] rst=0, en=0, cout=9
+# [COUNTER_SCB PASS] rst=0, en=0, cout=8
+# [COUNTER_SCB PASS] rst=0, en=0, cout=7
+# [COUNTER_SCB PASS] rst=0, en=0, cout=6
+# [COUNTER_SCB PASS] rst=0, en=0, cout=5
+# [COUNTER_SCB PASS] rst=0, en=0, cout=4
+# [COUNTER_SCB PASS] rst=0, en=0, cout=3
+# [COUNTER_SCB PASS] rst=0, en=0, cout=2
+# [COUNTER_SCB PASS] rst=0, en=0, cout=1
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=15
+# [COUNTER_SCB PASS] rst=0, en=0, cout=14
+# [COUNTER_SCB PASS] rst=0, en=0, cout=13
+# [COUNTER_SCB PASS] rst=0, en=0, cout=12
+# [COUNTER_SCB PASS] rst=0, en=0, cout=11
+# [COUNTER_SCB PASS] rst=0, en=0, cout=10
+# [COUNTER_SCB PASS] rst=0, en=0, cout=9
+# [COUNTER_SCB PASS] rst=0, en=0, cout=8
+# [COUNTER_SCB PASS] rst=0, en=0, cout=7
+# [COUNTER_SCB PASS] rst=0, en=0, cout=6
+# [COUNTER_SCB PASS] rst=0, en=0, cout=5
+# [COUNTER_SCB PASS] rst=0, en=0, cout=4
+# [COUNTER_SCB PASS] rst=0, en=0, cout=3
+# [COUNTER_SCB PASS] rst=0, en=0, cout=2
+# [COUNTER_SCB PASS] rst=0, en=0, cout=1
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=15
+# [COUNTER_SCB PASS] rst=0, en=0, cout=14
+# [COUNTER_SCB PASS] rst=0, en=0, cout=13
+# [COUNTER_SCB PASS] rst=0, en=0, cout=12
+# [COUNTER_SCB PASS] rst=0, en=0, cout=11
+# [COUNTER_SCB PASS] rst=0, en=0, cout=10
+# [COUNTER_SCB PASS] rst=0, en=0, cout=9
+# [COUNTER_SCB PASS] rst=0, en=0, cout=8
+# [COUNTER_SCB PASS] rst=0, en=0, cout=7
+# [COUNTER_SCB PASS] rst=0, en=0, cout=6
+# [COUNTER_SCB PASS] rst=0, en=0, cout=5
+# [COUNTER_SCB PASS] rst=0, en=0, cout=4
+# [COUNTER_SCB PASS] rst=0, en=0, cout=3
+# [COUNTER_SCB PASS] rst=0, en=0, cout=2
+# [COUNTER_SCB PASS] rst=0, en=0, cout=1
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# UVM_INFO ./uvm/counter_test.sv(415) @ 1815000: uvm_test_top [ALL_TEST] Starting Reset Sequence
+# [COUNTER_SCB PASS] rst=0, en=0, cout=15
+# [COUNTER_SCB PASS] rst=1, en=1, cout=14
+# [COUNTER_SCB PASS] rst=1, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=0, cout=0
+# UVM_INFO ./uvm/counter_test.sv(429) @ 1915000: uvm_test_top [ALL_TEST] Starting Up Wrap Sequence
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=1, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=1
+# [COUNTER_SCB PASS] rst=0, en=1, cout=2
+# [COUNTER_SCB PASS] rst=0, en=1, cout=3
+# [COUNTER_SCB PASS] rst=0, en=1, cout=4
+# [COUNTER_SCB PASS] rst=0, en=1, cout=5
+# [COUNTER_SCB PASS] rst=0, en=1, cout=6
+# [COUNTER_SCB PASS] rst=0, en=1, cout=7
+# [COUNTER_SCB PASS] rst=0, en=1, cout=8
+# [COUNTER_SCB PASS] rst=0, en=1, cout=9
+# [COUNTER_SCB PASS] rst=0, en=1, cout=10
+# [COUNTER_SCB PASS] rst=0, en=1, cout=11
+# [COUNTER_SCB PASS] rst=0, en=1, cout=12
+# [COUNTER_SCB PASS] rst=0, en=1, cout=13
+# [COUNTER_SCB PASS] rst=0, en=1, cout=14
+# [COUNTER_SCB PASS] rst=0, en=1, cout=15
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=1
+# [COUNTER_SCB PASS] rst=0, en=1, cout=2
+# [COUNTER_SCB PASS] rst=0, en=1, cout=3
+# [COUNTER_SCB PASS] rst=0, en=1, cout=4
+# [COUNTER_SCB PASS] rst=0, en=1, cout=5
+# [COUNTER_SCB PASS] rst=0, en=1, cout=6
+# [COUNTER_SCB PASS] rst=0, en=1, cout=7
+# [COUNTER_SCB PASS] rst=0, en=1, cout=8
+# [COUNTER_SCB PASS] rst=0, en=1, cout=9
+# [COUNTER_SCB PASS] rst=0, en=1, cout=10
+# [COUNTER_SCB PASS] rst=0, en=1, cout=11
+# [COUNTER_SCB PASS] rst=0, en=1, cout=12
+# UVM_INFO ./uvm/counter_test.sv(443) @ 2225000: uvm_test_top [ALL_TEST] Starting Down Wrap Sequence
+# [COUNTER_SCB PASS] rst=0, en=1, cout=13
+# [COUNTER_SCB PASS] rst=1, en=0, cout=14
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=15
+# [COUNTER_SCB PASS] rst=0, en=0, cout=14
+# [COUNTER_SCB PASS] rst=0, en=0, cout=13
+# [COUNTER_SCB PASS] rst=0, en=0, cout=12
+# [COUNTER_SCB PASS] rst=0, en=0, cout=11
+# [COUNTER_SCB PASS] rst=0, en=0, cout=10
+# [COUNTER_SCB PASS] rst=0, en=0, cout=9
+# [COUNTER_SCB PASS] rst=0, en=0, cout=8
+# [COUNTER_SCB PASS] rst=0, en=0, cout=7
+# [COUNTER_SCB PASS] rst=0, en=0, cout=6
+# [COUNTER_SCB PASS] rst=0, en=0, cout=5
+# [COUNTER_SCB PASS] rst=0, en=0, cout=4
+# [COUNTER_SCB PASS] rst=0, en=0, cout=3
+# [COUNTER_SCB PASS] rst=0, en=0, cout=2
+# [COUNTER_SCB PASS] rst=0, en=0, cout=1
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=15
+# [COUNTER_SCB PASS] rst=0, en=0, cout=14
+# [COUNTER_SCB PASS] rst=0, en=0, cout=13
+# [COUNTER_SCB PASS] rst=0, en=0, cout=12
+# [COUNTER_SCB PASS] rst=0, en=0, cout=11
+# [COUNTER_SCB PASS] rst=0, en=0, cout=10
+# [COUNTER_SCB PASS] rst=0, en=0, cout=9
+# UVM_INFO ./uvm/counter_test.sv(457) @ 2485000: uvm_test_top [ALL_TEST] Starting Reset During Count Sequence
+# [COUNTER_SCB PASS] rst=0, en=0, cout=8
+# [COUNTER_SCB PASS] rst=1, en=1, cout=7
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=1
+# [COUNTER_SCB PASS] rst=0, en=1, cout=2
+# [COUNTER_SCB PASS] rst=0, en=1, cout=3
+# [COUNTER_SCB PASS] rst=0, en=1, cout=4
+# [COUNTER_SCB PASS] rst=1, en=0, cout=5
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=1
+# [COUNTER_SCB PASS] rst=0, en=1, cout=2
+# [COUNTER_SCB PASS] rst=0, en=1, cout=3
+# UVM_INFO ./uvm/counter_test.sv(473) @ 2605000: uvm_test_top [ALL_TEST] Starting Up-Down Sequence
+# [COUNTER_SCB PASS] rst=0, en=1, cout=4
+# [COUNTER_SCB PASS] rst=1, en=1, cout=5
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=1
+# [COUNTER_SCB PASS] rst=0, en=1, cout=2
+# [COUNTER_SCB PASS] rst=0, en=1, cout=3
+# [COUNTER_SCB PASS] rst=0, en=1, cout=4
+# [COUNTER_SCB PASS] rst=0, en=0, cout=5
+# [COUNTER_SCB PASS] rst=0, en=0, cout=4
+# [COUNTER_SCB PASS] rst=0, en=0, cout=3
+# [COUNTER_SCB PASS] rst=0, en=1, cout=2
+# [COUNTER_SCB PASS] rst=0, en=1, cout=3
+# [COUNTER_SCB PASS] rst=0, en=1, cout=4
+# UVM_INFO ./uvm/counter_test.sv(489) @ 2735000: uvm_test_top [ALL_TEST] Starting Corner Sequence
+# [COUNTER_SCB PASS] rst=0, en=1, cout=5
+# [COUNTER_SCB PASS] rst=1, en=1, cout=6
+# [COUNTER_SCB PASS] rst=0, en=1, cout=0
+# [COUNTER_SCB PASS] rst=0, en=1, cout=1
+# [COUNTER_SCB PASS] rst=0, en=1, cout=2
+# [COUNTER_SCB PASS] rst=0, en=1, cout=3
+# [COUNTER_SCB PASS] rst=0, en=1, cout=4
+# [COUNTER_SCB PASS] rst=0, en=1, cout=5
+# [COUNTER_SCB PASS] rst=0, en=1, cout=6
+# [COUNTER_SCB PASS] rst=0, en=1, cout=7
+# [COUNTER_SCB PASS] rst=0, en=1, cout=8
+# [COUNTER_SCB PASS] rst=0, en=1, cout=9
+# [COUNTER_SCB PASS] rst=0, en=1, cout=10
+# [COUNTER_SCB PASS] rst=0, en=1, cout=11
+# [COUNTER_SCB PASS] rst=0, en=1, cout=12
+# [COUNTER_SCB PASS] rst=0, en=1, cout=13
+# [COUNTER_SCB PASS] rst=0, en=1, cout=14
+# [COUNTER_SCB PASS] rst=0, en=1, cout=15
+# [COUNTER_SCB PASS] rst=0, en=0, cout=0
+# [COUNTER_SCB PASS] rst=0, en=0, cout=15
+# [COUNTER_SCB PASS] rst=0, en=0, cout=14
+# [COUNTER_SCB PASS] rst=0, en=0, cout=13
+# [COUNTER_SCB PASS] rst=0, en=0, cout=12
+# [COUNTER_SCB PASS] rst=0, en=0, cout=11
+# [COUNTER_SCB PASS] rst=0, en=0, cout=10
+# [COUNTER_SCB PASS] rst=0, en=0, cout=9
+# [COUNTER_SCB PASS] rst=0, en=0, cout=8
+# [COUNTER_SCB PASS] rst=0, en=0, cout=7
+# [COUNTER_SCB PASS] rst=0, en=0, cout=6
+# [COUNTER_SCB PASS] rst=0, en=0, cout=5
+# [COUNTER_SCB PASS] rst=0, en=0, cout=4
+# [COUNTER_SCB PASS] rst=0, en=0, cout=3
+# UVM_INFO ./uvm/counter_test.sv(505) @ 3055000: uvm_test_top [ALL_TEST] ======================================
+# UVM_INFO ./uvm/counter_test.sv(509) @ 3055000: uvm_test_top [ALL_TEST] ALL COUNTER TESTS COMPLETED
+# UVM_INFO ./uvm/counter_test.sv(513) @ 3055000: uvm_test_top [ALL_TEST] ======================================
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 3055000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ./uvm/counter_coverage.sv(126) @ 3055000: uvm_test_top.env.coverage [COVERAGE] ==============================================
+# UVM_INFO ./uvm/counter_coverage.sv(130) @ 3055000: uvm_test_top.env.coverage [COVERAGE]           FUNCTIONAL COVERAGE REPORT
+# UVM_INFO ./uvm/counter_coverage.sv(134) @ 3055000: uvm_test_top.env.coverage [COVERAGE] ==============================================
+# UVM_INFO ./uvm/counter_coverage.sv(140) @ 3055000: uvm_test_top.env.coverage [COVERAGE] INPUT COVERAGE        = 100.00%
+# UVM_INFO ./uvm/counter_coverage.sv(149) @ 3055000: uvm_test_top.env.coverage [COVERAGE] OUTPUT COVERAGE       = 100.00%
+# UVM_INFO ./uvm/counter_coverage.sv(158) @ 3055000: uvm_test_top.env.coverage [COVERAGE] INPUT/OUTPUT COVERAGE = 100.00%
+# UVM_INFO ./uvm/counter_coverage.sv(167) @ 3055000: uvm_test_top.env.coverage [COVERAGE] rst coverage          = 100.00%
+# UVM_INFO ./uvm/counter_coverage.sv(174) @ 3055000: uvm_test_top.env.coverage [COVERAGE] en coverage           = 100.00%
+# UVM_INFO ./uvm/counter_coverage.sv(181) @ 3055000: uvm_test_top.env.coverage [COVERAGE] cout coverage         = 100.00%
+# UVM_INFO ./uvm/counter_coverage.sv(189) @ 3055000: uvm_test_top.env.coverage [COVERAGE] ==============================================
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   27
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [ALL_TEST]    12
+# [COVERAGE]    10
+# [UVM]     3
+# [RNTST]     1
+# [TEST_DONE]     1
+# ** Note: $finish    : C:/questasim64_2024.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 3055 ns  Iteration: 63  Instance: /tb_top
