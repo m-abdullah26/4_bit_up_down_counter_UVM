@@ -1,30 +1,44 @@
-4-BIT UP/DOWN COUNTER - UVM VERIFICATION
-=============================================
+# 4-Bit Up/Down Counter — UVM Verification
 
-PROJECT OVERVIEW
-----------------
-A SystemVerilog UVM-based verification environment for a synchronous
-4-bit up/down counter. The project verifies reset, up-counting,
-down-counting, direction switching, overflow/underflow wrap-around,
-corner cases, and functional coverage.
+A SystemVerilog **UVM-based verification environment** for a synchronous 4-bit up/down counter. The project verifies reset, up/down counting, direction switching, overflow/underflow wrap-around, corner cases, and functional coverage using **QuestaSim**.
 
+## 📌 Project Overview
 
-DUT FUNCTIONALITY
------------------
-The counter is controlled by reset (rst) and enable/direction (en):
+The DUT is controlled by reset (`rst`) and enable/direction (`en`):
 
-    rst = 1              -> Counter resets to 0
-    rst = 0, en = 1      -> Counter increments
-    rst = 0, en = 0      -> Counter decrements
+| Condition | Operation |
+|---|---|
+| `rst = 1` | Counter resets to `0` |
+| `rst = 0, en = 1` | Counter increments |
+| `rst = 0, en = 0` | Counter decrements |
+| `15 + 1` | Wraps to `0` |
+| `0 - 1` | Wraps to `15` |
 
-Because the counter is 4 bits wide:
+## 🧩 DUT
 
-    15 + 1 = 0           -> Up-count wrap-around
-    0  - 1 = 15          -> Down-count wrap-around
+```systemverilog
+module counter(
+    input  logic       clk,
+    input  logic       rst,
+    input  logic       en,
+    output logic [3:0] cout
+);
 
+    always_ff @(posedge clk) begin
+        if (rst)
+            cout <= 4'b0000;
+        else if (en)
+            cout <= cout + 1;
+        else
+            cout <= cout - 1;
+    end
 
-UVM TESTBENCH ARCHITECTURE
---------------------------
+endmodule
+```
+
+## 🏗️ UVM Testbench Architecture
+
+```text
 tb_top
   |
   +-- DUT
@@ -44,10 +58,11 @@ tb_top
                   +-- scoreboard
                   |
                   +-- coverage
+```
 
+### Transaction Flow
 
-TRANSACTION FLOW
-----------------
+```text
 Sequence
    |
    v
@@ -65,188 +80,253 @@ Monitor
    +-----------> Scoreboard
    |
    +-----------> Functional Coverage
+```
 
+## 📁 Project Structure
 
-PROJECT STRUCTURE
------------------
+```text
 4_bit_up_down_counter_UVM/
-|
-+-- rtl/
-|   +-- dut.sv
-|
-+-- uvm/
-|   +-- inf_counter.sv
-|   +-- counter_pkg.sv
-|   +-- counter_seq_item.sv
-|   +-- counter_sequence.sv
-|   +-- counter_sequencer.sv
-|   +-- counter_driver.sv
-|   +-- counter_monitor.sv
-|   +-- counter_coverage.sv
-|   +-- counter_scoreboard.sv
-|   +-- counter_agent.sv
-|   +-- counter_env.sv
-|   +-- counter_test.sv
-|
-+-- tb/
-|   +-- tb_top.sv
-|
+│
+├── rtl/
+│   └── dut.sv
+│
+├── uvm/
+│   ├── inf_counter.sv
+│   ├── counter_pkg.sv
+│   ├── counter_seq_item.sv
+│   ├── counter_sequence.sv
+│   ├── counter_sequencer.sv
+│   ├── counter_driver.sv
+│   ├── counter_monitor.sv
+│   ├── counter_coverage.sv
+│   ├── counter_scoreboard.sv
+│   ├── counter_agent.sv
+│   ├── counter_env.sv
+│   ├── counter_test.sv
+│   ├── counter_up_test.sv
+│   ├── counter_down_test.sv
+│   ├── counter_reset_test.sv
+│   ├── counter_up_wrap_test.sv
+│   ├── counter_down_wrap_test.sv
+│   ├── counter_reset_during_count_test.sv
+│   ├── counter_up_down_test.sv
+│   ├── counter_corner_test.sv
+│   └── counter_all_test.sv
+│
+├── tb/
+│   └── tb_top.sv
+│
+└── run.do
+```
 
+## 🧪 Verification Tests
 
-VERIFICATION TESTS
-------------------
-counter_test
-    Random counter stimulus
+| Test | Verification Scenario |
+|---|---|
+| `counter_test` | Random counter stimulus |
+| `counter_up_test` | Up-counting operation |
+| `counter_down_test` | Down-counting operation |
+| `counter_reset_test` | Reset behavior |
+| `counter_up_wrap_test` | `15 → 0` overflow |
+| `counter_down_wrap_test` | `0 → 15` underflow |
+| `counter_reset_during_count_test` | Reset during active counting |
+| `counter_up_down_test` | Direction switching |
+| `counter_corner_test` | Boundary and corner cases |
+| `counter_all_test` | Runs all verification sequences |
 
-counter_up_test
-    Verifies up-counting operation
+## 🔍 Scoreboard
 
-counter_down_test
-    Verifies down-counting operation
+The scoreboard implements a reference model of the counter and compares the expected state against the output sampled by the monitor.
 
-counter_reset_test
-    Verifies reset behavior
+### Reset
 
-counter_up_wrap_test
-    Verifies 15 -> 0 overflow
+```text
+rst = 1 → cout = 0
+```
 
-counter_down_wrap_test
-    Verifies 0 -> 15 underflow
+### Up Counting
 
-counter_reset_during_count_test
-    Verifies reset during active counting
+```text
+rst = 0, en = 1 → cout increments
+```
 
-counter_up_down_test
-    Verifies switching between up and down modes
+### Down Counting
 
-counter_corner_test
-    Verifies boundary and corner cases
-
-counter_all_test
-    Runs all verification sequences as a combined regression
-
-
-SCOREBOARD
-----------
-The scoreboard implements a reference model of the counter and compares
-the expected state against the output sampled by the monitor.
-
-Reset:
-    rst = 1 -> cout = 0
-
-Up counting:
-    rst = 0, en = 1 -> cout increments
-
-Down counting:
-    rst = 0, en = 0 -> cout decrements
+```text
+rst = 0, en = 0 → cout decrements
+```
 
 The 4-bit width naturally provides modulo-16 behavior:
 
-    15 + 1 = 0
-    0  - 1 = 15
+```text
+15 + 1 = 0
+0  - 1 = 15
+```
 
+## 📊 Functional Coverage
 
-FUNCTIONAL COVERAGE
--------------------
-The coverage model monitors input and output behavior.
+The coverage model monitors both inputs and outputs.
 
-Input Coverage:
-    rst = 0
-    rst = 1
-    en  = 0
-    en  = 1
+### Input Coverage
 
-Output Coverage:
-    All 4-bit counter values from 0 through 15
+- `rst = 0`
+- `rst = 1`
+- `en = 0`
+- `en = 1`
 
-Cross Coverage:
-    rst x en
-    en  x cout
+### Output Coverage
 
-The coverage model helps determine whether the verification stimulus
-actually exercised the intended functional scenarios.
+All 4-bit counter values from `0` through `15`.
 
+### Cross Coverage
 
-CLOCKING BLOCKS
----------------
-Separate driver and monitor clocking blocks are used to provide
-controlled synchronization between the testbench and DUT.
+- `rst × en`
+- `en × cout`
 
-Driver clocking block:
+This helps determine whether the verification stimulus actually exercised the intended functional scenarios.
 
-    clocking driver_cb @(posedge clk);
-        default output #1ns;
-        output rst;
-        output en;
-    endclocking
+## ⏱️ Clocking Blocks
 
-Monitor clocking block:
+Separate driver and monitor clocking blocks provide controlled synchronization between the testbench and DUT.
 
-    clocking monitor_cb @(posedge clk);
-        default input #1ns;
-        input rst;
-        input en;
-        input cout;
-    endclocking
+```systemverilog
+clocking monitor_cb @(posedge clk);
+    default input #1ns;
+    input rst;
+    input en;
+    input cout;
+endclocking
+
+clocking driver_cb @(posedge clk);
+    default output #1ns;
+    output rst;
+    output en;
+endclocking
+```
 
 The driver uses clocking-block output assignments:
 
-    vif.driver_cb.rst <= req.rst;
-    vif.driver_cb.en  <= req.en;
+```systemverilog
+vif.driver_cb.rst <= req.rst;
+vif.driver_cb.en  <= req.en;
+```
 
 The monitor samples through:
 
-    @(vif.monitor_cb);
+```systemverilog
+@(vif.monitor_cb);
+```
 
 This helps avoid race conditions between the testbench and DUT.
 
+## ▶️ Running the Simulation
 
-RUNNING THE SIMULATION
-----------------------
+Open QuestaSim in the project directory and execute:
 
-The script file performs the following:
+```tcl
+do run.do
+```
 
-    1. Cleans/creates the work library
-    2. Compiles the DUT
-    3. Compiles the interface
-    4. Compiles the UVM package
-    5. Compiles the testbench top
-    6. Starts the simulation
-    7. Runs counter_all_test
-    8. Displays the simulation results and waveform
+The `run.do` script:
 
+1. Cleans/creates the `work` library
+2. Compiles the DUT
+3. Compiles the interface
+4. Compiles the UVM package
+5. Compiles the testbench top
+6. Starts the simulation
+7. Runs `counter_all_test`
+8. Displays simulation results and waveforms
 
-RUNNING A SPECIFIC TEST
------------------------
-A specific test can be selected using +UVM_TESTNAME.
+### Run a Specific Test
 
-+UVM_TESTNAME=counter_up_test
+```tcl
+vsim -voptargs=+acc work.tb_top +UVM_TESTNAME=counter_up_test
+```
 
-Other examples:
+Other tests can be selected with:
 
-    +UVM_TESTNAME=counter_down_test
-    +UVM_TESTNAME=counter_reset_test
-    +UVM_TESTNAME=counter_up_wrap_test
-    +UVM_TESTNAME=counter_down_wrap_test
-    +UVM_TESTNAME=counter_corner_test
-    +UVM_TESTNAME=counter_all_test
+```text
++UVM_TESTNAME=counter_down_test
++UVM_TESTNAME=counter_reset_test
++UVM_TESTNAME=counter_up_wrap_test
++UVM_TESTNAME=counter_down_wrap_test
++UVM_TESTNAME=counter_corner_test
++UVM_TESTNAME=counter_all_test
+```
 
+## 📈 Expected Results
 
-EXPECTED RESULTS
-----------------
 A successful simulation should report:
 
-    UVM_ERROR   : 0
-    UVM_FATAL   : 0
+```text
+UVM_ERROR   : 0
+UVM_FATAL   : 0
+```
 
-The scoreboard reports PASS/FAIL transaction checks.
+The scoreboard reports transaction-level PASS/FAIL results, while the coverage component reports functional coverage during `report_phase()`.
 
-The functional coverage component reports the achieved coverage
-percentage during report_phase.
+Example:
 
-AUTHOR
-------
-M. Abdullah
+```text
+==============================================
+          FUNCTIONAL COVERAGE REPORT
+==============================================
 
-Digital IC Design Verification
-SystemVerilog | UVM | RTL Verification 
+INPUT COVERAGE        = XX.XX%
+OUTPUT COVERAGE       = XX.XX%
+INPUT/OUTPUT COVERAGE = XX.XX%
+
+==============================================
+```
+
+Replace the example values with actual measured coverage before publishing results.
+
+## 🛠️ Tools & Technologies
+
+- SystemVerilog
+- UVM 1.1d
+- QuestaSim 2024.1
+- RTL Simulation
+- UVM Testbench Architecture
+- Functional Coverage
+- Constrained/Random Verification
+- Directed Testing
+- Scoreboard-Based Checking
+- SystemVerilog Clocking Blocks
+
+## 🎯 Key Verification Features
+
+- Reusable UVM sequence items
+- Directed and random stimulus
+- UVM sequencer-driver communication
+- Virtual interface
+- Clocking-block-based synchronization
+- Active UVM agent
+- Transaction-level monitoring
+- Reference-model scoreboard
+- Reset verification
+- Up/down counting verification
+- Overflow and underflow verification
+- Direction switching
+- Corner-case testing
+- Functional input/output coverage
+- Combined regression test
+
+## 🚀 Future Improvements
+
+- Add transition coverage for `15 → 0` and `0 → 15`
+- Add SystemVerilog Assertions (SVA)
+- Add Questa code coverage
+- Add coverage-driven constrained-random testing
+- Add virtual sequences
+- Add automated regression reporting
+- Improve functional coverage closure
+
+## 👨‍💻 Author
+
+**Abdullah**
+
+Digital Design & Verification
+
+SystemVerilog • UVM • RTL Verification • QuestaSim
