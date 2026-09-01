@@ -1,6 +1,6 @@
 # 4-Bit Up/Down Counter — UVM Verification
 
-A SystemVerilog **UVM-based verification environment** for a synchronous 4-bit up/down counter. The project verifies reset, up/down counting, direction switching, overflow/underflow wrap-around, corner cases, and functional coverage using **QuestaSim**.
+A SystemVerilog **UVM-based verification environment** for a synchronous 4-bit up/down counter. The project verifies reset, up/down counting, direction switching, overflow/underflow wrap-around, corner cases, and functional coverage.
 
 ## 📌 Project Overview
 
@@ -221,13 +221,7 @@ This helps avoid race conditions between the testbench and DUT.
 
 ## ▶️ Running the Simulation
 
-Open QuestaSim in the project directory and execute:
-
-```tcl
-do run.do
-```
-
-The `run.do` script:
+The script file:
 
 1. Cleans/creates the `work` library
 2. Compiles the DUT
@@ -240,9 +234,7 @@ The `run.do` script:
 
 ### Run a Specific Test
 
-```tcl
-vsim -voptargs=+acc work.tb_top +UVM_TESTNAME=counter_up_test
-```
++UVM_TESTNAME=counter_all_test
 
 Other tests can be selected with:
 
@@ -252,7 +244,7 @@ Other tests can be selected with:
 +UVM_TESTNAME=counter_up_wrap_test
 +UVM_TESTNAME=counter_down_wrap_test
 +UVM_TESTNAME=counter_corner_test
-+UVM_TESTNAME=counter_all_test
++UVM_TESTNAME=counter_up_test
 ```
 
 ## 📈 Expected Results
@@ -266,67 +258,10 @@ UVM_FATAL   : 0
 
 The scoreboard reports transaction-level PASS/FAIL results, while the coverage component reports functional coverage during `report_phase()`.
 
-Example:
-
-```text
-==============================================
-          FUNCTIONAL COVERAGE REPORT
-==============================================
-
-INPUT COVERAGE        = XX.XX%
-OUTPUT COVERAGE       = XX.XX%
-INPUT/OUTPUT COVERAGE = XX.XX%
-
-==============================================
-```
-
-Replace the example values with actual measured coverage before publishing results.
-
-## 🛠️ Tools & Technologies
-
-- SystemVerilog
-- UVM 1.1d
-- QuestaSim 2024.1
-- RTL Simulation
-- UVM Testbench Architecture
-- Functional Coverage
-- Constrained/Random Verification
-- Directed Testing
-- Scoreboard-Based Checking
-- SystemVerilog Clocking Blocks
-
-## 🎯 Key Verification Features
-
-- Reusable UVM sequence items
-- Directed and random stimulus
-- UVM sequencer-driver communication
-- Virtual interface
-- Clocking-block-based synchronization
-- Active UVM agent
-- Transaction-level monitoring
-- Reference-model scoreboard
-- Reset verification
-- Up/down counting verification
-- Overflow and underflow verification
-- Direction switching
-- Corner-case testing
-- Functional input/output coverage
-- Combined regression test
-
-## 🚀 Future Improvements
-
-- Add transition coverage for `15 → 0` and `0 → 15`
-- Add SystemVerilog Assertions (SVA)
-- Add Questa code coverage
-- Add coverage-driven constrained-random testing
-- Add virtual sequences
-- Add automated regression reporting
-- Improve functional coverage closure
-
 ## 👨‍💻 Author
 
-**Abdullah**
+**M. Abdullah**
 
-Digital Design & Verification
+Digital IC Design Verification Engineer
 
-SystemVerilog • UVM • RTL Verification • QuestaSim
+SystemVerilog • UVM • RTL Verification
